@@ -13,13 +13,34 @@ function draw_clock(obj) {
   //        > 0 --> the number of seconds until alarm should go off
   
   background('#3EC6DE'); 
-  fill(50)
 
+  //Draw Tower 
+  triangle(330, 375, 358, 320, 386, 375)
   fill('Brown')
-  ellipse(340,250,140,130);
-  fill(140, 255, 251) // blue
-  ellipse(width / 2, 350, 150);
-  fill(175, 133, 255); // purple
-  ellipse(width / 3 * 2, 350, 150);
+
+  rect (260, 50, 380,450)
+  fill('#EB946A')
+  stroke('#EB946A')
+
+  rect(320,250,264,100)
+
+  //Clouds Drawing 
+  fill('white')
+  stroke('white')
+  ellipse(120,100,50,35)
+  ellipse(80,100,50,35)
+  ellipse(100,80,50,35)
+ 
+   //Clouds Drawing 
+   fill('white')
+   stroke('white')
+   ellipse(100,300,50,35)
+   ellipse(80,320,50,35)
+   ellipse(120,320,50,35)
+  
+  
+
+
+  
 
 }
