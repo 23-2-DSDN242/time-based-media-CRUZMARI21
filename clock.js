@@ -22,21 +22,42 @@ function draw_clock(obj) {
   fill('#EB946A')
   stroke('#EB946A')
 
-  rect(320,250,264,100)
+  //Big Clock
+  ellipse(450,250,264,250)
 
-  //Clouds Drawing 
+  //Clock Pointer
+  fill('black')
+  stroke('black')
+  ellipse(450,250,10,10)
+
+  //
+
+  //Top Left Clouds Drawing 
   fill('white')
   stroke('white')
   ellipse(120,100,50,35)
   ellipse(80,100,50,35)
   ellipse(100,80,50,35)
  
-   //Clouds Drawing 
+   //Bottom Left Clouds Drawing 
    fill('white')
    stroke('white')
    ellipse(100,300,50,35)
    ellipse(80,320,50,35)
    ellipse(120,320,50,35)
+
+   //Top Right Clouds Drawing 
+    ellipse(850,100,50,35)
+    ellipse(870,120,50,35)
+    ellipse(830,120,50,35)
+
+   //Bottom Right Clouds Drawing 
+   ellipse(750,300,50,35)
+   ellipse(770,320,50,35)
+   ellipse(730,320,50,35)
+
+
+
   
   
 
