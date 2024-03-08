@@ -18,11 +18,12 @@ function draw_clock(obj) {
   triangle(330, 375, 358, 320, 386, 375)
   fill('Brown')
 
+  stroke('#AC897D')
   rect (260, 50, 380,450)
-  fill('#EB946A')
-  stroke('#EB946A')
-
+  fill('#AC897D')
+  
   //Big Clock
+  fill('white')
   ellipse(450,250,264,250)
 
   //Clock Pointer
@@ -30,7 +31,7 @@ function draw_clock(obj) {
   stroke('black')
   ellipse(450,250,10,10)
 
-  //
+  
 
   //Top Left Clouds Drawing 
   fill('white')
