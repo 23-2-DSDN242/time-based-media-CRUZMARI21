@@ -12,26 +12,34 @@ function draw_clock(obj) {
   //        = 0 if the alarm is currently going off
   //        > 0 --> the number of seconds until alarm should go off
   
-  background('#3EC6DE'); 
+  background('#BAE0FF'); 
 
   //Draw Tower 
-  triangle(330, 375, 358, 320, 386, 375)
-  fill('Brown')
-
-  stroke('#AC897D')
+  fill('#876049')
+  stroke ('#876049')
   rect (260, 50, 380,450)
-  fill('#AC897D')
   
   //Big Clock
-  fill('white')
-  ellipse(450,250,264,250)
+  fill('#BF8F73')
+  stroke('#BF8F73')
+  rect(289,130,320,250)
 
-  //Clock Pointer
-  fill('black')
-  stroke('black')
-  ellipse(450,250,10,10)
 
+
+  beginShape()
+  vertex(130,175)
+  vertex(130,175)
+  vertex(130,175)
+  vertex(130,175)
+  vertex(130,175)
+  vertex(130,175)
+  endShape()
   
+
+
+  // Clock
+  fill('white')
+  ellipse(450,255, 240,220)
 
   //Top Left Clouds Drawing 
   fill('white')
