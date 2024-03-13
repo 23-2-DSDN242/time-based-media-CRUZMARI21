@@ -22,24 +22,16 @@ function draw_clock(obj) {
   //Big Clock
   fill('#BF8F73')
   stroke('#BF8F73')
-  rect(289,130,320,250)
+  rect(289,60,320,250)
 
-
-
-  beginShape()
-  vertex(130,175)
-  vertex(130,175)
-  vertex(130,175)
-  vertex(130,175)
-  vertex(130,175)
-  vertex(130,175)
-  endShape()
+ 
+  rect(320,350, 260,200)
+ 
   
 
-
-  // Clock
+  //Clock
   fill('white')
-  ellipse(450,255, 240,220)
+  ellipse(450,185, 240,220)
 
   //Top Left Clouds Drawing 
   fill('white')
