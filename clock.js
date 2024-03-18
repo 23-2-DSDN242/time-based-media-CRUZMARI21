@@ -23,15 +23,26 @@ function draw_clock(obj) {
   fill('#BF8F73')
   stroke('#BF8F73')
   rect(289,60,320,250)
-
+  stroke ('#B88052')
  
-  rect(320,350, 260,200)
+  rect(315,350,270,150)
+  stroke('#B88052')
  
   
-
-  //Clock
   fill('white')
+  strokeWeight('white');
+  ellipse(200, 50, 33, 33); // Left circle
+  push();
+  fill('white');
+  ellipse(233, 50, 33, 33);
+
+  
+  //Clock
+  fill('#E9BA96')
+  stroke('#B88052')
   ellipse(450,185, 240,220)
+
+ 
 
   //Top Left Clouds Drawing 
   fill('white')
@@ -56,6 +67,17 @@ function draw_clock(obj) {
    ellipse(750,300,50,35)
    ellipse(770,320,50,35)
    ellipse(730,320,50,35)
+
+   ellipse(0, 50, 33, 33); // Left circle
+   push(); // Start a new drawing state
+   strokeWeight(15);
+   fill(204, 153, 0);
+   ellipse(33, 50, 33, 33); // Left-middle circle
+
+   translate(width / 2.3, height / 3);
+   rotate(PI / 3.0);
+   line(50, -26, 52, 52);
+   
 
 
 
