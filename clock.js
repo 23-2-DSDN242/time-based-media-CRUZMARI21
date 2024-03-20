@@ -15,34 +15,23 @@ function draw_clock(obj) {
   background('#BAE0FF'); 
 
   //Draw Tower 
-  fill('#876049')
-  stroke ('#876049')
+  noStroke()
+  fill('#BD7A77')
   rect (260, 50, 380,450)
   
   //Big Clock
-  fill('#BF8F73')
-  stroke('#BF8F73')
-  rect(289,60,320,250)
+  noStroke()
+  fill('#96605A')
+  rect(290,100,320,250)
   stroke ('#B88052')
  
+  noStroke()
   rect(315,350,270,150)
-  stroke('#B88052')
- 
-  
-  fill('white')
-  strokeWeight('white');
-  ellipse(200, 50, 33, 33); // Left circle
-  push();
-  fill('white');
-  ellipse(233, 50, 33, 33);
 
-  
   //Clock
-  fill('#E9BA96')
-  stroke('#B88052')
-  ellipse(450,185, 240,220)
-
- 
+  fill('#D4D4D4')
+  noStroke()
+  ellipse(450,240, 240,220)
 
   //Top Left Clouds Drawing 
   fill('white')
@@ -59,32 +48,44 @@ function draw_clock(obj) {
    ellipse(120,320,50,35)
 
    //Top Right Clouds Drawing 
-    ellipse(850,100,50,35)
-    ellipse(870,120,50,35)
-    ellipse(830,120,50,35)
+   ellipse(850,100,50,35)
+   ellipse(870,120,50,35)
+   ellipse(830,120,50,35)
 
    //Bottom Right Clouds Drawing 
    ellipse(750,300,50,35)
    ellipse(770,320,50,35)
    ellipse(730,320,50,35)
-
-   ellipse(0, 50, 33, 33); // Left circle
-   push(); // Start a new drawing state
-   strokeWeight(15);
-   fill(204, 153, 0);
-   ellipse(33, 50, 33, 33); // Left-middle circle
-
-   translate(width / 2.3, height / 3);
-   rotate(PI / 3.0);
-   line(50, -26, 52, 52);
    
 
+   //Draw Clock Line
+   push()
+   translate(width / 2.5, height / 3.5);
+   rotate(PI / 3.0);
+   line(50, -0.01, 20, 52);
+   pop()
 
+   //1 o clock
+   translate(430, 200);
+   rotate(360);
+   strokeWeight(5);
+   line(50,20,50,50,50,150,50,height)
+
+   //2 o clock
+   translate(190, 200);
+   rotate(-100);
+   
+  
 
   
-  
 
 
-  
+   
+
+ 
+
+
+   
+
 
 }
