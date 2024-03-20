@@ -14,11 +14,18 @@ function draw_clock(obj) {
   
   background('#BAE0FF'); 
 
+  angleMode(DEGREES)
+
   //Draw Tower 
   noStroke()
   fill('#BD7A77')
-  rect (260, 50, 380,450)
+  rect(260, 50, 380,450)
   
+  //Clock
+  ellipse(450,240, 240,220)
+  noStroke()
+  fill('#D4D4D4')
+
   //Big Clock
   noStroke()
   fill('#96605A')
@@ -27,11 +34,6 @@ function draw_clock(obj) {
  
   noStroke()
   rect(315,350,270,150)
-
-  //Clock
-  fill('#D4D4D4')
-  noStroke()
-  ellipse(450,240, 240,220)
 
   //Top Left Clouds Drawing 
   fill('white')
@@ -56,25 +58,46 @@ function draw_clock(obj) {
    ellipse(750,300,50,35)
    ellipse(770,320,50,35)
    ellipse(730,320,50,35)
+
+   pop();
+   
    
 
-   //Draw Clock Line
-   push()
-   translate(width / 2.5, height / 3.5);
-   rotate(PI / 3.0);
-   line(50, -0.01, 20, 52);
-   pop()
+  fill('grey')
+  ellipse(width/2.12, height/2.1,235)
+  
+  strokeWeight(5)
+  textSize(50)
+  textAlign(CENTER, CENTER);
+  text(obj.seconds, width / 2, 200);
 
-   //1 o clock
-   translate(430, 200);
-   rotate(360);
-   strokeWeight(5);
-   line(50,20,50,50,50,150,50,height)
 
-   //2 o clock
-   translate(190, 200);
-   rotate(-100);
+
+
+ //Draw Clock Line
+ push()
+ translate(450,240);
+    //// drawing the  face of the clock 
+
+ ellipse(0,0,10,10)
+ rotate(PI / 3.0);
+ line(50, -0.01, 20, 52);
+ pop() 
    
+  //O'clock
+  translate(430, 200);
+  rotate(360);
+  strokeWeight(5);
+  line(50,20,50,50,50,150,50,height)
+
+
+
+
+
+
+
+ 
+
   
 
   
