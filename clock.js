@@ -11,9 +11,12 @@ function draw_clock(obj) {
   //        < 0 if no alarm is set
   //        = 0 if the alarm is currently going off
   //        > 0 --> the number of seconds until alarm should go off
-  
-  background('#BAE0FF'); 
-
+  if(obj.seconds == 15){
+    background(0); 
+  }
+  else{
+  background('#BAE0FF'); // blue
+  }
   angleMode(DEGREES)
 
   //Draw Tower 
@@ -68,27 +71,27 @@ function draw_clock(obj) {
   
   strokeWeight(5)
   textSize(50)
-  textAlign(CENTER, CENTER);
+  textAlign(100, 200,300);
   text(obj.seconds, width / 2, 200);
-
-
-
 
  //Draw Clock Line
  push()
  translate(450,240);
-    //// drawing the  face of the clock 
+    //// drawing the face of the clock 
 
+ fill ('white')
  ellipse(0,0,10,10)
  rotate(PI / 3.0);
- line(50, -0.01, 20, 52);
+ line(4, 5, 20, 52);
  pop() 
    
   //O'clock
   translate(430, 200);
   rotate(360);
   strokeWeight(5);
-  line(50,20,50,50,50,150,50,height)
+  line(5,15,25,50,50,150,50,height)
+
+
 
 
 
