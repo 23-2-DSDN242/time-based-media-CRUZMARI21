@@ -11,13 +11,19 @@ function draw_clock(obj) {
   //        < 0 if no alarm is set
   //        = 0 if the alarm is currently going off
   //        > 0 --> the number of seconds until alarm should go off
+  
+  
   if(obj.seconds == 15){
-    background(0); 
+    background('black'); 
   }
   else{
-  background('#BAE0FF'); // blue
+  background('#00094F'); // blue
   }
   angleMode(DEGREES)
+
+
+
+
 
   //Draw Tower 
   noStroke()
