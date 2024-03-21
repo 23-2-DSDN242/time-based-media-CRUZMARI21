@@ -13,10 +13,8 @@ function draw_clock(obj) {
   //        > 0 --> the number of seconds until alarm should go off
   
 
-  if(obj.seconds == 10){
-    background('black'); 
-  }
-  if(obj.seconds == 10){
+
+  if(obj.seconds > 10){
     background('black'); 
   }
   else{
@@ -24,12 +22,11 @@ function draw_clock(obj) {
     }
     angleMode(DEGREES)
    
-    if(obj.seconds_until_alarm > 3 ) {
-      background('PINK')
-      angleMode (DEGREES)
-
-    }
-
+  if(obj.seconds_until_alarm < 0){
+ }else if(obj.seconds_until_alarm > 0){
+}else{
+fill(207, 4, 88) //red
+}
   
   //Draw Tower 
   noStroke()
@@ -37,8 +34,8 @@ function draw_clock(obj) {
   rect(260, 50, 380,450)
   
   //Clock
-  ellipse(450,240, 240,220)
   noStroke()
+  ellipse(450,240, 240,220)
   fill('#D4D4D4')
 
   //Big Clock
@@ -51,15 +48,15 @@ function draw_clock(obj) {
   rect(315,350,270,150)
 
   //Top Left Clouds Drawing 
+  noStroke()
   fill('white')
-  stroke('white')
   ellipse(120,100,50,35)
   ellipse(80,100,50,35)
   ellipse(100,80,50,35)
  
-   //Bottom Left Clouds Drawing 
+   //Bottom Left Clouds Drawing
+   noStroke() 
    fill('white')
-   stroke('white')
    ellipse(100,300,50,35)
    ellipse(80,320,50,35)
    ellipse(120,320,50,35)
@@ -74,9 +71,6 @@ function draw_clock(obj) {
    ellipse(770,320,50,35)
    ellipse(730,320,50,35)
 
-   
-   
-   
 
   fill('grey')
   ellipse(width/2.12, height/2.1,235)
@@ -86,6 +80,7 @@ function draw_clock(obj) {
   textAlign(150, 400,400);
   text(obj.seconds, width / 2.27, 420);
 
+
  //Draw Clock Line
  push()
  translate(450,240);
@@ -94,15 +89,18 @@ function draw_clock(obj) {
  fill ('white')
  ellipse(0,0,10,10)
  rotate(PI / 3.0);
- line(4, 5, 20, 52);
- pop() 
-   
+ stroke('white')
+ line(2, 4, 20, 52);
+
+
+ line(4,2,30,10)
+ pop()
+  
   //O'clock
   translate(430, 200);
   rotate(360);
   strokeWeight(5);
   line(5,15,25,50,50,150,50,height)
-
 
 
 
