@@ -1,6 +1,8 @@
 /*
  * use p5.js to draw a clock on a 960x500 canvas
  */
+var Xmove = 1;
+var Ymove = 1;
 function draw_clock(obj) {
   // draw your own clock here based on the values of obj:
   //    obj.hours goes from 0-23
@@ -14,7 +16,7 @@ function draw_clock(obj) {
   
 
 
-  if(obj.seconds > 10){
+  if(obj.seconds > 26){
     background('black'); 
   }
   else{
@@ -50,26 +52,26 @@ fill(207, 4, 88) //red
   //Top Left Clouds Drawing 
   noStroke()
   fill('white')
-  ellipse(120,100,50,35)
-  ellipse(80,100,50,35)
-  ellipse(100,80,50,35)
+  ellipse(60+Xmove,100,50,35)
+  ellipse(20+Xmove,100,50,35)
+  ellipse(40+Xmove,80,50,35)
  
    //Bottom Left Clouds Drawing
    noStroke() 
    fill('white')
-   ellipse(100,300,50,35)
-   ellipse(80,320,50,35)
-   ellipse(120,320,50,35)
+   ellipse(40+Xmove,300,50,35)
+   ellipse(20+Xmove,320,50,35)
+   ellipse(60+Xmove,320,50,35)
 
    //Top Right Clouds Drawing 
-   ellipse(850,100,50,35)
-   ellipse(870,120,50,35)
-   ellipse(830,120,50,35)
+   ellipse(70+Ymove,90, 50,35)
+   ellipse(50+Ymove,110,50,35)
+   ellipse(90+Ymove,110,50,35)
 
    //Bottom Right Clouds Drawing 
-   ellipse(750,300,50,35)
-   ellipse(770,320,50,35)
-   ellipse(730,320,50,35)
+   ellipse(70+Ymove,300,50,35)
+   ellipse(50+Ymove,320,50,35)
+   ellipse(90+Ymove,320,50,35)
 
 
   fill('grey')
@@ -104,26 +106,23 @@ fill(207, 4, 88) //red
 
 
 
-
-
-
-
-
-
-
+  fill('white')
  
-
   
 
+  Xmove = Xmove + 1;
   
+  if(Xmove > 200){
+    Xmove = 200;
+
+  Ymove = Ymove + 1
+  if(Ymove > 200){
+    Ymove = 200;
+
+  }
+  }
 
 
-   
-
- 
-
-
-   
 
 
 }
