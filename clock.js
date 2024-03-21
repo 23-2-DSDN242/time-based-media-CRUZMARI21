@@ -15,31 +15,27 @@ function draw_clock(obj) {
   //        > 0 --> the number of seconds until alarm should go off
   
 
-
-  if(obj.seconds > 26){
-    background('black'); 
+  if(obj.seconds > 5){
+    background('orange'); 
   }
   else{
     background('#DFF4F3'); // blue
     }
-    angleMode(DEGREES)
-   
-  if(obj.seconds_until_alarm < 0){
- }else if(obj.seconds_until_alarm > 0){
-}else{
-fill(207, 4, 88) //red
-}
+    angleMode(RADIANS)
+
+    
+
   
+ //Draw clock line 
+ //line(2+Ymove,2,20,20);
+ //line(2+Xmove,2,2,40)
+
+
   //Draw Tower 
   noStroke()
   fill('#BD7A77')
   rect(260, 50, 380,450)
   
-  //Clock
-  noStroke()
-  ellipse(450,240, 240,220)
-  fill('#D4D4D4')
-
   //Big Clock
   noStroke()
   fill('#96605A')
@@ -49,14 +45,24 @@ fill(207, 4, 88) //red
   noStroke()
   rect(315,350,270,150)
 
+  if(obj.seconds_until_alarm < 0){
+  }else{ 
+    background('#ffd1d4'); // pink
+    textSize(50)
+    text("DAYLIGHT", 70, height/2)
+    text("SAVING", 610, height/2)
+    fill ('white')
+
+}
+
   //Top Left Clouds Drawing 
   noStroke()
   fill('white')
   ellipse(60+Xmove,100,50,35)
   ellipse(20+Xmove,100,50,35)
   ellipse(40+Xmove,80,50,35)
- 
-   //Bottom Left Clouds Drawing
+  
+  //Bottom Left Clouds Drawing
    noStroke() 
    fill('white')
    ellipse(40+Xmove,300,50,35)
@@ -64,15 +70,16 @@ fill(207, 4, 88) //red
    ellipse(60+Xmove,320,50,35)
 
    //Top Right Clouds Drawing 
-   ellipse(70+Ymove,90, 50,35)
-   ellipse(50+Ymove,110,50,35)
-   ellipse(90+Ymove,110,50,35)
+   ellipse(770-Ymove,90, 50,35)
+   ellipse(750-Ymove,110,50,35)
+   ellipse(790-Ymove,110,50,35)
 
    //Bottom Right Clouds Drawing 
-   ellipse(70+Ymove,300,50,35)
-   ellipse(50+Ymove,320,50,35)
-   ellipse(90+Ymove,320,50,35)
+   ellipse(870-Ymove,300,50,35)
+   ellipse(850-Ymove,320,50,35)
+   ellipse(890-Ymove,320,50,35)
 
+  
 
   fill('grey')
   ellipse(width/2.12, height/2.1,235)
@@ -85,30 +92,25 @@ fill(207, 4, 88) //red
 
  //Draw Clock Line
  push()
- translate(450,240);
+ translate(width / 2.1, height / 2);
     //// drawing the face of the clock 
-
+  
+    
  fill ('white')
- ellipse(0,0,10,10)
- rotate(PI / 3.0);
+ ellipse(-0,0,30,30)
+ rotate(200 , 300);
  stroke('white')
- line(2, 4, 20, 52);
-
-
- line(4,2,30,10)
- pop()
+ line(50,90,-4, -0)
+ line(50,10,-4, -7)
   
   //O'clock
-  translate(430, 200);
-  rotate(360);
-  strokeWeight(5);
-  line(5,15,25,50,50,150,50,height)
+  //translate(130, 200);
+  //rotate(20);
+  //strokeWeight(5);
+  //line(5,15,25,50,50,150,50,height)
 
-
-
-  fill('white')
+  //fill('white')
  
-  
 
   Xmove = Xmove + 1;
   
