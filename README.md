@@ -3,4 +3,6 @@
 ### THIS IS YOUR README
 
 Update this file as you go along to record your progress.
-phoebe test
+
+#Heading 1 
+My project is about a clock tower and instantly changes overtime as 
